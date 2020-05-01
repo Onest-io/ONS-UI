@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/Onest-io/ONS-UI.svg?branch=master)](https://travis-ci.org/Onest-io/ONS-UI)
+
 Onest-UI
 ============
 [中文版](README_zh.md)
