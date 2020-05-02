@@ -31,7 +31,10 @@ cd ONS-UI
 Before launching the GUI you will need to install the npm packages:
 
 ```
+npm cache clean -f
+npm install -g n install n
 npm install
+npm run install-charting-library
 ```
 
 ## Running the dev server
