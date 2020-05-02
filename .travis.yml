@@ -11,7 +11,3 @@ addons:
     organization: "onest-io"
     token:
       secure: "836a8d667feefee0411e32013bfb4f943927a533" # encrypted value of your token
-
-script:
-  # the following command line builds the project, runs the tests with coverage and then execute the SonarCloud analysis
-  - sonar-scanner -X
