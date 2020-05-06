@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/Onest-io/ONS-UI.svg?branch=master)](https://travis-ci.org/Onest-io/ONS-UI)
+[![Build Status](https://travis-ci.org/Onest-io/ONS-UI.svg?branch=staging)](https://travis-ci.org/Onest-io/ONS-UI)
 [![Build Status](https://travis-ci.org/Onest-io/ONS-UI.svg?branch=develop)](https://travis-ci.org/Onest-io/ONS-UI)
 
 Onest-UI
