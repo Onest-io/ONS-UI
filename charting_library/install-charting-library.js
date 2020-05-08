@@ -22,10 +22,10 @@ http.get("https://github.com/Onest-io/ONS-UI/raw/master/charting_library/chartin
 outputFile.on("finish", () => {
     const actualDigest = getMD5Digest(outputFilePath);
     const expectedDigest = fs.readFileSync(outputFilePath + ".md5").toString();
-//    if (actualDigest !== expectedDigest) {
-//        fs.unlinkSync(outputFilePath);
-//        throw new Error("MD5 of downloaded file (" + actualDigest + ") not matches expected (" + expectedDigest + ")");
-//    }
+    if (actualDigest !== expectedDigest) {
+        fs.unlinkSync(outputFilePath);
+        throw new Error("MD5 of downloaded file (" + actualDigest + ") not matches expected (" + expectedDigest + ")");
+    }
     console.log("MD5 digest validated, extracting library...");
     extract(outputFilePath, {dir: __dirname}, function (err) {
         if (err) {
