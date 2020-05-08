@@ -3,6 +3,7 @@ var path = require("path");
 const md5File = require("md5-file");
 const http = require("https");
 var extract = require("extract-zip");
+process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = 0;
 
 function getMD5Digest(file) {
     const hash = md5File.sync(file);
