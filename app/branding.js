@@ -13,7 +13,7 @@ function _isTestnet() {
     const testnet =
         "39f5e2ede1f8bc1a3a54a7914414e3779e33193f1f5693510e73cb7a87617447"; // just for the record
     const mainnet =
-        "c6f05a61d597fc481fabd87fad75f8b1fd4b961362de3bdf73433f76871cca54";
+        "6f98714c3c80e734839cdca421073ed05e5da06680dbb3a9a07a386256a6fc75";
 
     // treat every other chain as testnet
     return Apis.instance().chain_id !== mainnet;
@@ -93,14 +93,14 @@ export function getUnits() {
     if (_isTestnet()) {
         return ["TEST"];
     }
-    return ["ONS", "USD", "CNY", "BTC", "EUR", "GBP"];
+    return ["ONS", "VOTE"];
 }
 
 export function getDefaultMarket() {
     if (_isTestnet()) {
         return "USD_TEST";
     }
-    return "USD_ONS";
+    return "VOTE_ONS";
 }
 
 /**
@@ -112,7 +112,7 @@ export function getMyMarketsBases() {
     if (_isTestnet()) {
         return ["TEST"];
     }
-    return ["ONS", "BTC", "ETH", "USD", "CNY"];
+    return ["ONS", "VOTE"];
 }
 
 /**
@@ -126,15 +126,8 @@ export function getMyMarketsQuotes() {
     }
     let tokens = {
         nativeTokens: [
-            "BTC",
-            "ONS",
-            "CNY",
-            "EUR",
-            "GOLD",
-            "KRW",
-            "RUBLE",
-            "SILVER",
-            "USD"
+            "VOTE",
+            "ONS"
         ],
         bridgeTokens: ["BRIDGE.BCO", "BRIDGE.BTC", "BRIDGE.MONA", "BRIDGE.ZNY"],
         gdexTokens: [
@@ -224,49 +217,7 @@ export function getFeaturedMarkets(quotes = []) {
         return [["USD", "TEST"]];
     }
     return [
-        ["USD", "ONS"],
-        ["USD", "OPEN.BTC"],
-        ["USD", "OPEN.USDT"],
-        ["USD", "OPEN.ETH"],
-        ["USD", "OPEN.DASH"],
-        ["USD", "GOLD"],
-        ["USD", "HERO"],
-        ["USD", "GDEX.BTC"],
-        ["USD", "GDEX.ETH"],
-        ["USD", "GDEX.EOS"],
-        ["USD", "GDEX.BTO"],
-        ["USD", "OPEN.EOSDAC"],
-        ["USD", "RUDEX.BTC"],
-        ["USD", "RUDEX.STEEM"],
-        ["USD", "RUDEX.EOS"],
-        ["CNY", "ONS"],
-        ["CNY", "OPEN.BTC"],
-        ["CNY", "USD"],
-        ["CNY", "OPEN.ETH"],
-        ["CNY", "YOYOW"],
-        ["CNY", "OCT"],
-        ["CNY", "GDEX.BTC"],
-        ["CNY", "GDEX.ETH"],
-        ["CNY", "GDEX.EOS"],
-        ["CNY", "GDEX.BTO"],
-        ["CNY", "GDEX.BTM"],
-        ["CNY", "GDEX.SEER"],
-        ["CNY", "GDEX.BKBT"],
-        ["CNY", "GDEX.USDT"],
-        ["CNY", "GDEX.GXC"],
-        ["CNY", "RUDEX.GOLOS"],
-        ["CNY", "RUDEX.GBG"],
-        ["CNY", "RUDEX.BTC"],
-        ["CNY", "RUDEX.EOS"],
-        ["ONS", "PPY"],
-        ["ONS", "OBITS"],
-        ["ONS", "RUBLE"],
-        ["ONS", "HERO"],
-        ["ONS", "OCT"],
-        ["ONS", "SILVER"],
-        ["ONS", "GOLD"],
-        ["ONS", "BTWTY"],
-        ["ONS", "SMOKE"]
+        ["ONS", "VOTE"]
     ].filter(a => {
         if (!quotes.length) return true;
         return quotes.indexOf(a[0]) !== -1;
