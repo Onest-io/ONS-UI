@@ -3,6 +3,7 @@ var path = require("path");
 const md5File = require("md5-file");
 const http = require("https");
 var extract = require("extract-zip");
+process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = 0;
 
 function getMD5Digest(file) {
     const hash = md5File.sync(file);
@@ -12,7 +13,7 @@ function getMD5Digest(file) {
 var outputFilePath = path.join(__dirname, "charting_library.zip");
 const outputFile = fs.createWriteStream(outputFilePath);
 
-http.get("https://bitshares.org/assets/charting_library.zip", (response) => {
+http.get("https://dex.onest.io/charting_library.zip", (response) => {
     response.pipe(outputFile);    
 }).on("error", (err) => {
     console.error("Failed to download charting_library archive");
