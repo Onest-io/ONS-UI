@@ -12,7 +12,7 @@ function getMD5Digest(file) {
 var outputFilePath = path.join(__dirname, "charting_library.zip");
 const outputFile = fs.createWriteStream(outputFilePath);
 
-http.get("https://github.com/Onest-io/ONS-UI/blob/master/charting_library/charting_library.zip", (response) => {
+http.get("https://github.com/Onest-io/ONS-UI/blob/master/charting_library/charting_library1.zip", (response) => {
     response.pipe(outputFile);    
 }).on("error", (err) => {
     console.error("Failed to download charting_library archive");
