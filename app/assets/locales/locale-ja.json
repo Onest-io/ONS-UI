@@ -476,7 +476,7 @@
         "ws_status": "フルノード接続状態"
     },
     "assets": {
-        "BTS": "BTS is the core token of the BitShares Blockchain"
+        "ONS": "ONS is the core token of the Onest Blockchain"
     },
     "boolean": {
         "false": "False",
