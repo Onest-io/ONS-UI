@@ -13,7 +13,7 @@ function _isTestnet() {
     const testnet =
         "39f5e2ede1f8bc1a3a54a7914414e3779e33193f1f5693510e73cb7a87617447"; // just for the record
     const mainnet =
-        "f0aa8b5cb5524829da1f7946aded03c42e325807957d20c7867c2c9cb659a9bf";
+        "de456b2f9df12e76d78883f0a9aab78bfe4bcd6d216670e357f36809a0dc5a2c";
 
     // treat every other chain as testnet
     return Apis.instance().chain_id !== mainnet;
