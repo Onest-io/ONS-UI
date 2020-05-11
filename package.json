@@ -1,9 +1,9 @@
 {
-    "name": "BitShares2-light",
+    "name": "Onest2-light",
     "version": "3.3.191120",
-    "description": "Reference UI to showcase all features of the BitShares blockchain.",
-    "homepage": "https://github.com/bitshares/bitshares-ui",
-    "author": "BitShares UI Worker <ui-dev@bitshares.org>",
+    "description": "Reference UI to showcase all features of the Onest blockchain.",
+    "homepage": "https://github.com/Onest-io/ONS-UI",
+    "author": "Onest UI Worker <ui-dev@onest.io>",
     "contributors": [
         "Sigve Kvalsvik",
         "James Calfee",
@@ -18,7 +18,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "git://github.com/bitshares/bitshares-ui"
+        "url": "git://github.com/Onest-io/ONS-UI"
     },
     "main": "build/electron/index.js",
     "scripts": {
@@ -90,8 +90,8 @@
     },
     "browsersList": "electron 1.7",
     "build": {
-        "productName": "BitShares",
-        "appId": "org.bitshares.graphene",
+        "productName": "Onest",
+        "appId": "org.onest.graphene",
         "files": [
             "build/electron",
             "!node_modules"
@@ -131,7 +131,7 @@
                 "AppImage",
                 "snap"
             ],
-            "synopsis": "BitShares: Cryptocurrency and Decentralized Exchange"
+            "synopsis": "Onest: Cryptocurrency and Decentralized Exchange"
         },
         "directories": {
             "buildResources": "resources",
@@ -139,13 +139,13 @@
         }
     },
     "dependencies": {
-        "alt": "git+https://github.com/bitshares/alt.git#b6b42ceb790ca321402e9add95b9f77af8a7657d",
-        "alt-container": "git+https://github.com/bitshares/alt-container.git#cf4e2c690a54e49fc9fe2dc99ab8816e6c3e5a86",
-        "alt-react": "git+https://github.com/bitshares/alt-react.git#d91addef51f58e41e9857ebb0dd9177cfbd3b583",
+        "alt": "git+https://github.com/Onest-io/alt.git#b6b42ceb790ca321402e9add95b9f77af8a7657d",
+        "alt-container": "git+https://github.com/Onest-io/alt-container.git#cf4e2c690a54e49fc9fe2dc99ab8816e6c3e5a86",
+        "alt-react": "git+https://github.com/Onest-io/alt-react.git#d91addef51f58e41e9857ebb0dd9177cfbd3b583",
         "bignumber.js": "^4.0.0",
-        "bitshares-report": "git+https://github.com/bitshares/bitshares-report.git#bba397fc7b4eb903d1ca109ac33301e9d2e2d753",
-        "bitshares-ui-style-guide": "git+https://github.com/bitshares/bitshares-ui-style-guide.git#23ca108d47442dc70634797fb113d1e751e9b1cb",
-        "bitsharesjs": "^3.3.0-rc1",
+        "bitshares-report": "git+https://github.com/Onest-io/bitshares-report.git#bba397fc7b4eb903d1ca109ac33301e9d2e2d753",
+        "bitshares-ui-style-guide": "git+https://github.com/Onest-io/bitshares-ui-style-guide.git#23ca108d47442dc70634797fb113d1e751e9b1cb",
+        "bitsharesjs": "git+https://github.com/Onest-io/bitsharesjs.git",
         "browser-locale": "^1.0.3",
         "classnames": "^2.2.1",
         "cookies-js": "^1.2.1",
@@ -153,7 +153,7 @@
         "counterpart": "^0.18.5",
         "event-emitter": "^0.3.4",
         "file-saver": "^1.3.8",
-        "foundation-apps": "git+https://github.com/zurb/foundation-apps.git",
+        "foundation-apps": "git+https://github.com/Onest-io/foundation-apps.git",
         "fractional": "^1.0.0",
         "hirestime": "^3.2.1",
         "ifvisible": "^1.1.0",
@@ -161,7 +161,7 @@
         "indexeddbshim": "^2.2.1",
         "intl": "^1.2.5",
         "intro.js": "^2.8.0-alpha.1",
-        "jdenticon": "git+https://github.com/cryptonomex/jdenticon.git",
+        "jdenticon": "git+https://github.com/Onest-io/jdenticon.git",
         "js-sha256": "^0.2.3",
         "jsonschema": "^1.2.4",
         "jspdf": "^1.4.1",
@@ -175,7 +175,7 @@
         "numeral": "2.0.4",
         "object-assign": "^4.0.1",
         "oidc-client": "^1.8.2",
-        "perfect-scrollbar": "git+https://github.com/bitshares/perfect-scrollbar.git",
+        "perfect-scrollbar": "git+https://github.com/Onest-io/perfect-scrollbar.git",
         "prop-types": "^15.6.1",
         "qrcode": "^1.4.4",
         "qrcode.react": "^0.7.1",
@@ -184,10 +184,10 @@
         "react-autocomplete": "^1.7.2",
         "react-clipboard.js": "^1.0.1",
         "react-copy-to-clipboard": "^5.0.1",
-        "react-datepicker2": "git+https://github.com/bitshares/react-datepicker2.git#9d4c2c28a23c970badcf765c35c5493d5a49afde",
+        "react-datepicker2": "git+https://github.com/Onest-io/react-datepicker2.git#9d4c2c28a23c970badcf765c35c5493d5a49afde",
         "react-debounce-render": "^4.0.2",
         "react-dom": "^16.4.1",
-        "react-foundation-apps": "git+https://github.com/bitshares/react-foundation-apps.git",
+        "react-foundation-apps": "git+https://github.com/Onest-io/react-foundation-apps.git",
         "react-highcharts": "^16.0",
         "react-interpolate-component": "^0.12.0",
         "react-intl": "^2.4.0",
@@ -250,7 +250,7 @@
         "https": "^1.0.0",
         "husky": "^0.14.3",
         "jest-cli": "^24.9.0",
-        "less-plugin-precompile-import": "git+https://github.com/gibbsfromncis/less-plugin-precompile-import.git#166550452515c03c0d497cae97bf58ba15ca1f84",
+        "less-plugin-precompile-import": "git+https://github.com/Onest-io/less-plugin-precompile-import.git#166550452515c03c0d497cae97bf58ba15ca1f84",
         "markdown-loader": "^5.1.0",
         "md5-file": "^4.0.0",
         "mini-css-extract-plugin": "^0.4.0",
