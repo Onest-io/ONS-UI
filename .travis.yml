@@ -12,4 +12,5 @@ addons:
     token:
       secure: "travis encrypt e6fc36fc864cbbd37283bec30e5a52248ebb82ec" # encrypted value of your token
 install:
+    - npm config set strict-ssl false
     - npm install
