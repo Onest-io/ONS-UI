@@ -35,6 +35,7 @@ Before launching the GUI you will need to install the npm packages:
 ```
 npm cache clean -f
 npm install -g n install
+npm config set strict-ssl false
 npm install
 npm run install-charting-library
 ```
