@@ -2,7 +2,7 @@
  --- | ---
  [![](https://travis-ci.org/Onest-io/ONS-UI.svg?branch=master)](https://travis-ci.org/Onest-io/ONS-UI) | [![](https://travis-ci.org/Onest-io/ONS-UI.svg?branch=develop)](https://travis-ci.org/Onest-io/ONS-UI)
 
-# Onest-UI BROWSER INTERFACE
+# Onest-UI WEB BASED INTERFACE
 ============
 
 This is a light wallet that connects to a Onest API provided by the *witness_node* executable.
