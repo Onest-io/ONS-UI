@@ -7,6 +7,7 @@ require("es6-promise").polyfill();
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 var locales = require("./app/assets/locales");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = 0;
 
 /*
 * For staging builds, set the version to the latest commit hash, for
