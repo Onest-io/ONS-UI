@@ -98,7 +98,7 @@ export function getUnits() {
 
 export function getDefaultMarket() {
     if (_isTestnet()) {
-        return "USD_TEST";
+        return "TEST";
     }
     return "VOTE_ONS";
 }
@@ -186,17 +186,8 @@ export function getMyMarketsQuotes() {
             "XBTSX.EXR"
         ],
         otherTokens: [
-            "BTWTY",
-            "TWENTIX",
-
-            "CVCOIN",
-            "HERO",
-            "OCT",
-            "HERTZ",
-            "ICOO",
-            "SMOKE",
             "STEALTH",
-            "YOYOW"
+
         ]
     };
 
