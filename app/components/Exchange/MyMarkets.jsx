@@ -348,14 +348,6 @@ class MyMarkets extends React.Component {
     }
 
     shouldComponentUpdate(nextProps, nextState) {
-        /* Trigger a lookup when switching tabs to find-market */
-        if (
-            this.state.activeTab !== "find-market" &&
-            nextState.activeTab === "find-market" &&
-            !nextProps.searchAssets.size
-        ) {
-            this._lookupAssets("OPEN.", true);
-        }
 
         if (this.state.activeTab !== nextState.activeTab) {
             this._changeTab(nextState.activeTab);
@@ -417,10 +409,6 @@ class MyMarkets extends React.Component {
         Ps.initialize(historyContainer);
 
         this._setMinWidth();
-
-        if (this.state.activeTab === "find-market") {
-            this._lookupAssets("OPEN.", true);
-        }
 
         if (this.state.activeTab !== this.props.activeTab) {
             setTimeout(() => {
