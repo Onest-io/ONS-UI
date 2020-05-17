@@ -252,7 +252,7 @@ class AccountVoting extends React.Component {
                 if (!!vote_objs[vote_objs.length - 1]) {
                     // there are more valid vote objs, fetch 10 more
                     vote_ids = [];
-                    for (var i = lastIdx + 9; i <= lastIdx + 20; i++) {
+                    for (var i = lastIdx + 11; i <= lastIdx + 20; i++) {
                         vote_ids.push(`1.${isWitness ? "6" : "5"}.${i}`);
                     }
                     return this._getVoteObjects(type, vote_ids);
