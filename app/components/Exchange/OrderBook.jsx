@@ -852,7 +852,7 @@ class OrderBook extends React.Component {
                         <th className="column-hide-xs">
                             <Translate
                                 className="header-sub-title"
-                                content="market_depth"
+                                content="exchange.market_depth"
                             />
                             <a
                                 onClick={() => this.toggleTotalAsset(true)}
@@ -920,7 +920,7 @@ class OrderBook extends React.Component {
                         <th className="column-hide-xs">
                             <Translate
                                 className="header-sub-title"
-                                content="market_depth"
+                                content="exchange.market_depth"
                             />
                             <a
                                 onClick={() => this.toggleTotalAsset()}
