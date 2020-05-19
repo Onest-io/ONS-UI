@@ -121,39 +121,40 @@ export function BorrowModalView({
             <span>
                 <span>
                     <Translate
-                    percentage = {25}
-                    component="a"
-                    onClick={onMaximizeCollatereal.bind(this, 25)}
-                    content="borrow.use_percentage"
+                        percentage = {25}
+                        component="a"
+                        onClick={onMaximizeCollatereal.bind(this, 25)}
+                        content="borrow.use_percentage"
                     />
                 </span>
                 <span>
                     <Translate
-                    percentage = {50}
-                    component="a"
-                    onClick={onMaximizeCollatereal.bind(this, 50)}
-                     content="borrow.use_percentage"
-                    />
-                </span>
-                    <Translate
-                    percentage = {75}
-                    component="a"
-                    onClick={onMaximizeCollatereal.bind(this, 75)}
-                    content="borrow.use_percentage"
+                        percentage = {50}
+                        component="a"
+                        onClick={onMaximizeCollatereal.bind(this, 50)}
+                        content="borrow.use_percentage"
                     />
                 </span>
                 <span>
-                      <Translate
-                      percentage = {100}
-                      component="a"
-                      onClick={onMaximizeCollatereal.bind(this, 100)}
-                      content="borrow.use_percentage"
-                      />
+                    <Translate
+                        percentage = {75}
+                        component="a"
+                        onClick={onMaximizeCollatereal.bind(this, 75)}
+                        content="borrow.use_percentage"
+                    />
                 </span>
-                      <Translate component="span" class="nontitle" content="transfer.available" />
+                <span>
+                    <Translate
+                        percentage = {100}
+                        component="a"
+                        onClick={onMaximizeCollatereal.bind(this, 100)}
+                        content="borrow.use_percentage"
+                    />
+                </span>
+
+                <Translate component="span" class="nontitle" content="transfer.available" />
                 <span class="nontitle">
-                      :{" "}
-                <span>
+                :{" "}
                     {collateralBalanceObj.id ? (
                         <FormattedAsset
                             noTip
@@ -171,7 +172,6 @@ export function BorrowModalView({
             </span>
         </span>
     );
-
     return !isValid ? (
         noValidComponent
     ) : (
@@ -196,7 +196,6 @@ export function BorrowModalView({
                     />
                 </div>
             )}
-
             {!isPredictionMarket && isOriginalBelowMCR ? (
                 <Translate
                     component="h6"
@@ -204,7 +203,6 @@ export function BorrowModalView({
                     content="borrow.errors.below_info"
                 />
             ) : null}
-
             {!isPredictionMarket ? (
                 <div
                     style={{
@@ -218,8 +216,8 @@ export function BorrowModalView({
                             :&nbsp;
                         </span>
                         <FormattedPrice
-                            noInvertTip
                             noPopOver
+                            noInvertTip
                             quote_amount={asset_utils
                                 .extractRawFeedPrice(quoteAssetObj)
                                 .getIn(["base", "amount"])}
@@ -253,7 +251,6 @@ export function BorrowModalView({
                     </div>
                 </div>
             ) : null}
-
             <Form className="full-width" layout="vertical">
                 <AmountSelector
                     noPopOver
@@ -328,7 +325,7 @@ export function BorrowModalView({
                             </Col>
                             <Col span={12}>
                                 <Form.Item
-                                    style={{textAlign: 'right' }}
+                                	style={{textAlign: 'right' }}
                                     validateStatus={
                                         errors.tcr_below_maintenance
                                             ? "error"
@@ -375,38 +372,38 @@ export function BorrowModalView({
                                         />
                                     ) : null}
                                     </Form.Item>
-                                </Col>
-                                <Col span={24}>
-                                <Form.Item>
-                                    <Slider
-                                        style={{ marginTop: -20 }}
-                                        step={0.01}
-                                        min={maintenanceRatio}
-                                        max={maintenanceRatio * 4}
-                                        value={collateral_ratio}
-                                        onChange={onRatioChange.bind(this)}
-                                        tooltipPlacement="bottom"
-                                    />
+                            </Col>
+                            <Col span={24}>
+                            <Form.Item>
+                                <Slider
+                                    style={{ marginTop: -20 }}
+                                    step={0.01}
+                                    min={maintenanceRatio}
+                                    max={maintenanceRatio * 4}
+                                    value={collateral_ratio}
+                                    onChange={onRatioChange.bind(this)}
+                                    tooltipPlacement="bottom"
+                                />
 
-                                    <AmountSelector
-                                        noPopOver
-                                        style= {{ marginTop: 50, marginBottom: 0, paddingBottom: 0 }}
-                                        label="transaction.borrow_amount"
-                                        amount={debtAmount.toString()}
-                                        onChange={onBorrowChange.bind(this)}
-                                        asset={quoteAssetObj.get("id")}
-                                        assets={[quoteAssetObj.get("id")]}
-                                        display_balance={bitAssetBalanceText}
-                                        placeholder="0.0"
-                                        tabIndex={1}
-                                        lockStatus={
-                                            unlockedInputType == "debt" || isRatioLocked
-                                                ? false
-                                                : true
-                                        }
-                                        onLockChange={onLockChangeDebt.bind(this)}
-                                    />
-                                </Form.Item>
+                                <AmountSelector
+                                    noPopOver
+                                    style= {{ marginTop: 50, marginBottom: 0, paddingBottom: 0 }}
+                                    label="transaction.borrow_amount"
+                                    amount={debtAmount.toString()}
+                                    onChange={onBorrowChange.bind(this)}
+                                    asset={quoteAssetObj.get("id")}
+                                    assets={[quoteAssetObj.get("id")]}
+                                    display_balance={bitAssetBalanceText}
+                                    placeholder="0.0"
+                                    tabIndex={1}
+                                    lockStatus={
+                                        unlockedInputType == "debt" || isRatioLocked
+                                            ? false
+                                            : true
+                                    }
+                                    onLockChange={onLockChangeDebt.bind(this)}
+                                />
+                            </Form.Item>
                             </Col>
                         </Row>
                     </React.Fragment>
