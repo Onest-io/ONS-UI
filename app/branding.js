@@ -205,10 +205,19 @@ export function getMyMarketsQuotes() {
  */
 export function getFeaturedMarkets(quotes = []) {
     if (_isTestnet()) {
-        return [["USD", "TEST"]];
+        return [["TEST"]];
     }
     return [
         ["ONS", "VOTE"]
+        ["ONS", "HONEST.BTC"],
+        ["ONS", "HONEST.ETH"],
+        ["ONS", "HONEST.XRP"],
+        ["HONEST.BTC", "HONEST.ETH1"],
+        ["HONEST.BTC", "HONEST.XRP1"],
+        ["ONS", "HONEST.XAU"],
+        ["ONS", "HONEST.XAG"],
+        ["ONS", "HONEST.USD"],
+        ["ONS", "HONEST.CNY"]
     ].filter(a => {
         if (!quotes.length) return true;
         return quotes.indexOf(a[0]) !== -1;
@@ -225,6 +234,7 @@ export function getAssetNamespaces() {
         return [];
     }
     return [
+        "HONEST."
         "RUDEX.",
         "BRIDGE.",
         "GDEX.",
@@ -251,7 +261,6 @@ export function allowedGateway(gateway) {
     const allowedGateways = [
         "TRADE",
         "RUDEX",
-        "BRIDGE",
         "GDEX",
         "XBTSX",
         "CITADEL"
