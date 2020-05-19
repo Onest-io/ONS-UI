@@ -208,7 +208,7 @@ export function getFeaturedMarkets(quotes = []) {
         return [["TEST"]];
     }
     return [
-        ["ONS", "VOTE"]
+        ["ONS", "VOTE"],
         ["ONS", "HONEST.BTC"],
         ["ONS", "HONEST.ETH"],
         ["ONS", "HONEST.XRP"],
@@ -234,7 +234,7 @@ export function getAssetNamespaces() {
         return [];
     }
     return [
-        "HONEST."
+        "HONEST.",
         "RUDEX.",
         "BRIDGE.",
         "GDEX.",
