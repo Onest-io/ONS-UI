@@ -144,7 +144,7 @@ export default class Workers extends React.Component {
                                 decimalOffset={4}
                                 hide_asset
                                 amount={voteThreshold}
-                                asset="1.3.0"
+                                asset="1.3.1"
                             />
                         </Col>
                     </Row>
@@ -162,7 +162,7 @@ export default class Workers extends React.Component {
                             {globalObject ? (
                                 <EquivalentValueComponent
                                     hide_asset
-                                    fromAsset="1.3.0"
+                                    fromAsset="1.3.1"
                                     toAsset={preferredUnit}
                                     amount={totalBudget}
                                 />
