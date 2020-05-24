@@ -108,7 +108,7 @@ class CommitteeMemberList extends React.Component {
                 render: item => (
                     <FormattedAsset
                         amount={item}
-                        asset="1.3.0"
+                        asset="1.3.1"
                         decimalOffset={5}
                     />
                 ),
