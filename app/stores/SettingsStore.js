@@ -453,7 +453,7 @@ class SettingsStore {
                 markets_4018d784: getMyMarketsQuotes(),
                 markets_39f5e2ed: [
                     // TESTNET
-                    "TEST",
+                    "TEST"
 
                 ]
             };
