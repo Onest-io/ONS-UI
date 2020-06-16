@@ -81,7 +81,7 @@ class WitnessRow extends React.Component {
                 <td>
                     <FormattedAsset
                         amount={witness_data.get("total_votes")}
-                        asset="1.3.1"
+                        asset="1.3.0"
                         decimalOffset={5}
                     />
                 </td>
@@ -331,7 +331,7 @@ class WitnessList extends React.Component {
                 render: item => (
                     <FormattedAsset
                         amount={item}
-                        asset="1.3.1"
+                        asset="1.3.0"
                         decimalOffset={5}
                     />
                 ),
