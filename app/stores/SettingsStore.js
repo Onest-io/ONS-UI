@@ -688,7 +688,7 @@ class SettingsStore {
     }
 
     _getChainId() {
-        return (Apis.instance().chain_id || "4018d784").substr(0, 8);
+        return (Apis.instance().chain_id || "f8d9da89").substr(0, 8);
     }
 
     _getChainKey(key) {
