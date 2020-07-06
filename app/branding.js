@@ -13,7 +13,7 @@ function _isTestnet() {
     const testnet =
         "39f5e2ede1f8bc1a3a54a7914414e3779e33193f1f5693510e73cb7a87617447"; // just for the record
     const mainnet =
-        "3e9cae8eeff09318ff1861b530cb45bd23f00eaf6883550c5878d9f2db793d1b";
+        "f8d9da89c97d407e5b14f1d731700725002ba12d2f93cdb703512bf79158ea76";
 
     // treat every other chain as testnet
     return Apis.instance().chain_id !== mainnet;
@@ -42,7 +42,7 @@ export function getWalletURL() {
  */
 export function getFaucet() {
     return {
-        url: "https://faucet.onest.io/onboarding", // 2017-12-infrastructure worker proposal
+        url: "https://dex.onest.io:7070", // 2017-12-infrastructure worker proposal
         show: true,
         editable: false,
         referrer: "iobanker"
