@@ -115,27 +115,17 @@ export const settingsAPIs = {
     // and use an object {translate: key} in WS_NODE_LIST
     DEFAULT_WS_NODE: "wss://fake.automatic-selection.com",
     WS_NODE_LIST: [
-        {
-            url: "ws://127.0.0.1:8090",
-            location: "Locally hosted"
-        },
-        {
-            url: "wss://seed01.ons.network:9090",
-            region: "Western Europe",
-            country: "Germany",
-            location: "Frankfurt",
-            operator: "Witness: iobanker",
-            contact: "email:admin@iobanker.com"
-        },
-        // Testnet
-        {
-            url: "wss://api.gbacenter.org/ws",
-            region: "Northern America",
-            country: "U.S.A.",
-            location: "Fremont, CA",
-            operator: "Witness: gbac-ety001",
-            contact: "email:work@domyself.me"
-        }
+	{
+        url: "wss://fake.automatic-selection.com",
+	location: {translate: "settings.api_closest"}
+	},
+	    {
+		    url: "wss://dex.onest.io:9090",
+		    region: "Western Europe",
+		    country: "Germany",
+		    operator: "Infrastructure Worker",
+		    contact: "email:info@onest.org"
+}
     ],
     ES_WRAPPER_LIST: [
         {
